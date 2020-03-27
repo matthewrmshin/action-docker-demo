@@ -1,0 +1,13 @@
+name: Whatever
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Test my old container
+      uses: docker://matthewrmshin/ubuntu-gfortran-fcm-make-netcdf:latest
+      with:
+        args: -c 'ls -l && fcm --version'

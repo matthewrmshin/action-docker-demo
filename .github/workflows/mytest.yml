@@ -10,4 +10,4 @@ jobs:
     - name: Test my old container
       uses: docker://matthewrmshin/ubuntu-gfortran-fcm-make-netcdf:latest
       with:
-        args: bash -c 'ls -l && fcm --version'
+        args: fcm make
